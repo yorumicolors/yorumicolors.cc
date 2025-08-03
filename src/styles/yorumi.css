@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --yorumi-tsuki0: #4a4d59;
+  --yorumi-tsuki1: #656771;
+  --yorumi-tsuki2: #878996;
+  --yorumi-tsuki3: #a7a9b5;
+  --yorumi-tsuki4: #bdbfcb;
+  --yorumi-tsukiP: #c0bce6;
+  --yorumi-tsukiG: #d7e1b7;
+  --yorumi-tsukiB: #c6dfec;
+
+  --yorumi-yoru0: #060914;
+  --yorumi-yoru1: #0c0f1a;
+  --yorumi-yoru2: #121520;
+  --yorumi-yoru3: #1d202b;
+  --yorumi-yoru4: #343742;
+  --yorumi-yoruP: #0e0d17;
+  --yorumi-yoruG: #141712;
+  --yorumi-yoruB: #0b0b19;
+
+  --yorumi-raito-red: #e8a8a6;
+  --yorumi-raito-green: #cee1b7;
+  --yorumi-raito-blue: #a6b2e2;
+  --yorumi-raito-yellow: #e4d8b4;
+  --yorumi-raito-magenta: #e3b5d1;
+  --yorumi-raito-cyan: #bbe2da;
+  --yorumi-raito-purple: #bea9e5;
+  --yorumi-raito-orange: #e9cea5;
+
+  --yorumi-kairo-red: #f47571;
+  --yorumi-kairo-green: #a9d07c;
+  --yorumi-kairo-blue: #798ddc;
+  --yorumi-kairo-yellow: #e1c084;
+  --yorumi-kairo-magenta: #e184af;
+  --yorumi-kairo-cyan: #85e0cb;
+  --yorumi-kairo-purple: #ad8fd6;
+  --yorumi-kairo-orange: #f8a26d;
+
+  --yorumi-sango-red: #c65e53;
+  --yorumi-sango-green: #8cb167;
+  --yorumi-sango-blue: #597bc0;
+  --yorumi-sango-yellow: #c39d55;
+  --yorumi-sango-magenta: #bb5d7d;
+  --yorumi-sango-cyan: #67bbb9;
+  --yorumi-sango-purple: #8666b2;
+  --yorumi-sango-orange: #c97e4f;
+
+  --yorumi-umi-red: #913b3b;
+  --yorumi-umi-green: #667c4d;
+  --yorumi-umi-blue: #42608a;
+  --yorumi-umi-yellow: #9b7722;
+  --yorumi-umi-magenta: #8d3f5a;
+  --yorumi-umi-cyan: #478584;
+  --yorumi-umi-purple: #614686;
+  --yorumi-umi-orange: #9e6729;
+
+  --yorumi-kuroi-red: #4e0e0e;
+  --yorumi-kuroi-green: #1c4642;
+  --yorumi-kuroi-blue: #0d2c4e;
+  --yorumi-kuroi-yellow: #605006;
+  --yorumi-kuroi-magenta: #4c1036;
+  --yorumi-kuroi-cyan: #104351;
+  --yorumi-kuroi-purple: #2a1844;
+  --yorumi-kuroi-orange: #5e3008;
+}

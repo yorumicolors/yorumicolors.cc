@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@import "./styles/themes.css";
+@import "./styles/animations.css";
+
+@theme inline {
+  --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-muted: var(--foreground-muted);
+
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-secondary: var(--surface-secondary);
+  --color-surface-floating: var(--surface-floating);
+
+  --color-ghost: var(--ghost);
+  --color-borders: var(--borders);
+
+  --color-red: var(--red);
+  --color-red-dull: var(--red-dull);
+  --color-red-hl: var(--red-hl);
+
+  --color-green: var(--green);
+  --color-green-dull: var(--green-dull);
+  --color-green-hl: var(--green-hl);
+
+  --color-blue: var(--blue);
+  --color-blue-dull: var(--blue-dull);
+  --color-blue-hl: var(--blue-hl);
+
+  --color-yellow: var(--yellow);
+  --color-yellow-dull: var(--yellow-dull);
+  --color-yellow-hl: var(--yellow-hl);
+
+  --color-magenta: var(--magenta);
+  --color-magenta-dull: var(--magenta-dull);
+  --color-magenta-hl: var(--magenta-hl);
+
+  --color-cyan: var(--cyan);
+  --color-cyan-dull: var(--cyan-dull);
+  --color-cyan-hl: var(--cyan-hl);
+
+  --color-purple: var(--purple);
+  --color-purple-dull: var(--purple-dull);
+  --color-purple-hl: var(--purple-hl);
+
+  --color-orange: var(--orange);
+  --color-orange-dull: var(--orange-dull);
+  --color-orange-hl: var(--orange-hl);
+}
+
+@theme inline {
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+
+  --default-transition-duration: 250ms;
+}
+
+body {
+  @apply bg-surface-primary text-foreground transition-colors duration-700;
+}
+
+.btn {
+  @apply px-4 py-1;
+
+  &.primary {
+    @apply border border-foreground bg-foreground text-surface-primary transition-all shadow-cyan-dull/30
+        hover:border-cyan hover:shadow-lg active:border-cyan-dull active:bg-foreground-secondary;
+  }
+}

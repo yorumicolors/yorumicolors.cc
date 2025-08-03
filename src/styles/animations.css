@@ -1,0 +1,31 @@
+@keyframes rotateSun {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(-540deg);
+  }
+}
+
+.sun-transition:hover {
+  animation: 5s rotateSun infinite;
+}
+
+@keyframes swayMoon {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateX(3px) rotate(10deg);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+.moon-transition:hover {
+  animation: 2s swayMoon infinite;
+}
