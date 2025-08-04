@@ -64,6 +64,7 @@
 
 html {
   scroll-behavior: smooth;
+  @apply overflow-y-scroll;
 }
 
 body {
@@ -107,4 +108,21 @@ span {
 
 input {
   @apply border border-borders outline-none px-6 pl-12 py-2 focus:border-foreground placeholder:text-foreground-muted;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-foreground-muted;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ghost) transparent;
 }
