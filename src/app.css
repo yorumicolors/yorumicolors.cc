@@ -5,10 +5,12 @@
 @theme inline {
   --color-foreground: var(--foreground);
   --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-accent: var(--foreground-accent);
   --color-foreground-muted: var(--foreground-muted);
 
   --color-surface-primary: var(--surface-primary);
   --color-surface-secondary: var(--surface-secondary);
+  --color-surface-tertiary: var(--surface-tertiary);
   --color-surface-floating: var(--surface-floating);
 
   --color-ghost: var(--ghost);
@@ -51,18 +53,58 @@
   --font-sans: "Geist", sans-serif;
   --font-mono: "Geist Mono", monospace;
 
-  --default-transition-duration: 250ms;
+  --text-xs: 11px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --text-lg: 16px;
+  --text-display: 36px;
+
+  --default-transition-duration: 400ms;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-surface-primary text-foreground transition-colors duration-700;
+  @apply bg-surface-primary text-foreground transition-colors duration-500 selection:bg-blue-hl selection:text-foreground scroll-smooth;
+}
+
+section {
+  @apply px-10 mb-16 min-h-screen flex w-full gap-10 h-full;
+
+  &.hero {
+    @apply pt-26 pb-16 !mb-0;
+  }
+
+  .sticky-header {
+    @apply bg-surface-primary z-10 sticky top-0 pt-10;
+  }
 }
 
 .btn {
-  @apply px-4 py-1;
+  @apply px-6 py-2 flex gap-1 items-center transition-all whitespace-nowrap select-none h-fit;
 
   &.primary {
-    @apply border border-foreground bg-foreground text-surface-primary transition-all shadow-cyan-dull/30
+    @apply border border-foreground bg-foreground text-surface-primary shadow-cyan-dull/30
         hover:border-cyan hover:shadow-lg active:border-cyan-dull active:bg-foreground-secondary;
   }
+
+  &.secondary {
+    @apply border border-borders hover:bg-surface-floating;
+  }
+}
+
+p {
+  @apply text-foreground-secondary;
+}
+
+span {
+  &.tag {
+    @apply font-mono px-4 py-2 border text-sm flex items-center gap-2;
+  }
+}
+
+input {
+  @apply border border-borders outline-none px-6 pl-12 py-2 focus:border-foreground placeholder:text-foreground-muted;
 }
