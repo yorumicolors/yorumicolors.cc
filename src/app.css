@@ -74,7 +74,7 @@ section {
   @apply px-10 mb-16 min-h-screen flex w-full gap-10 h-full;
 
   &.hero {
-    @apply pt-26 pb-16 !mb-0;
+    @apply pt-26 pb-18 !mb-0;
   }
 
   .sticky-header {

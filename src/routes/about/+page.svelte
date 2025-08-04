@@ -25,25 +25,38 @@
     </a>
   </div>
   <div class="flex jusitfy-center items-center w-full">
-    <div class="flex flex-col gap-6 w-full max-w-[600px]">
-      <div class="flex flex-col gap-2 w-full">
-        <h1 class="text-display">Deep Code, Quiet Seas</h1>
+    <div class="flex flex-col gap-8 w-full max-w-[600px]">
+      <div class="flex flex-col gap-4 w-full">
         <p>
-          Escape the harsh glare of traditional themes. Yorumi's color scheme,
-          inspired by the calming night sea, washes your editor in a soothing
-          blend of blues and greens, enhancing focus and readability for
-          productive late-night coding sessions.
+          Yorumi is a calming deep sea colorscheme for developers. Inspired by
+          the tranquil night sea, Yorumi bathes your editor in a soothing blend
+          of blues. Your text stays razor-sharp and easy on the eyes, perfect
+          for late-night coding marathons or when you crave a cozy nook.
+        </p>
+        <p>
+          As a longtime fan of the
+          <a
+            href="https://github.com/rebelot/kanagawa.nvim"
+            target="_blank"
+            class="text-foreground-accent"
+          >
+            Kanagawa theme
+          </a>
+          by rebelot, I wanted to elevate the experience further. Yorumi offers a
+          darker and cozier aesthetic, perfect for maintaining a sharp and serene
+          coding environment.
         </p>
       </div>
       <div class="flex gap-4">
-        <a href="#search" class="btn primary">
-          <Icon icon="ph:caret-circle-double-down-duotone" class="text-xl" />
-          <span>Get Yorumi</span>
+        <a href="https://github.com/yorumicolors/" class="btn primary">
+          <Icon icon="ph:handshake-duotone" class="text-xl" />
+          <span>Contribute</span>
         </a>
         <a
           href="https://github.com/sponsors/esskayesss/"
           target="_blank"
-          class="btn border border-borders bg-surface-tertiary hover:bg-surface-secondary"
+          class="btn border border-borders bg-surface-tertiary
+          hover:bg-surface-secondary hover:shadow-lg shadow-yellow-dull/30 hover:border-yellow"
         >
           <Icon icon="ph:coins-duotone" class="text-xl" />
           <span>Fuel the Voyage</span>

@@ -13,7 +13,7 @@
   <div
     in:fade={{ duration: 300, delay: 300 }}
     out:fade={{ duration: 300 }}
-    class="h-full flex-grow flex flex-col items-start overflow-x-none"
+    class="h-full flex-grow flex flex-col items-start w-full overflow-x-none"
   >
     {@render children()}
   </div>
