@@ -1,7 +1,16 @@
 <script lang="ts">
-  import { themeStore } from "$lib/stores/themeStore";
+  import { themeStore, type ThemeType } from "$lib/stores/themeStore";
   import Icon from "@iconify/svelte";
   import brand from "$lib/assets/brand.webp";
+  import abyss from "$lib/assets/abyss.webp?enhanced";
+  import shade from "$lib/assets/shade.webp?enhanced";
+  import kraken from "$lib/assets/kraken.webp?enhanced";
+  import mist from "$lib/assets/mist.webp?enhanced";
+  import { writable } from "svelte/store";
+  import { type Picture } from "imagetools-core";
+  import { slide } from "svelte/transition";
+
+  const showThemeSelector = writable<boolean>(false);
 </script>
 
 <header
@@ -28,7 +37,7 @@
       Blog
     </a>
     <div
-      class="flex items-center gap-4 px-4 py-2 rounded-full border border-borders bg-surface-floating"
+      class="flex items-center gap-4 px-4 py-2 rounded-full border border-borders bg-surface-floating relative"
     >
       <a
         href="https://github.com/yorumicolors"
@@ -59,27 +68,43 @@
       </a>
 
       <button
-        on:click={() =>
-          themeStore.set($themeStore === "light" ? "dark" : "light")}
+        on:click={() => showThemeSelector.set(!$showThemeSelector)}
+        class="cursor-pointer"
       >
-        {#if $themeStore === "light"}
-          <Icon
-            icon="ph:moon-duotone"
-            class="moon-transition cursor-pointer text-2xl transition-colors"
-          />
-        {:else if $themeStore === "dark"}
-          <Icon
-            icon="ph:sun-duotone"
-            class="sun-transition cursor-pointer text-2xl text-orange transition-colors hover:text-yellow-dull"
-          />
+        {#if $themeStore === "abyss"}
+          <enhanced:img src={abyss} alt="Abyss Theme" class="w-6 h-6" />
+        {:else if $themeStore === "shade"}
+          <enhanced:img src={shade} alt="Shade Theme" class="w-6 h-6" />
+        {:else if $themeStore === "kraken"}
+          <enhanced:img src={kraken} alt="Kraken Theme" class="w-6 h-6" />
         {:else}
-          <Icon
-            icon="ph:palette-duotone"
-            on:click={() => alert("clicked")}
-            class="cursor-pointer text-2xl transition-colors"
-          />
+          <enhanced:img src={mist} alt="Mist Theme" class="w-6 h-6" />
         {/if}
       </button>
+      {#if $showThemeSelector}
+        <div
+          class="flex flex-col gap-1 absolute top-full w-fit right-0 mt-1"
+          transition:slide
+        >
+          {@render themeButton("abyss", abyss)}
+          {@render themeButton("shade", shade)}
+          {@render themeButton("kraken", kraken)}
+          {@render themeButton("mist", mist)}
+        </div>
+      {/if}
     </div>
   </nav>
 </header>
+
+{#snippet themeButton(name: ThemeType, imgSrc: Picture)}
+  <button
+    on:click={() => {
+      themeStore.set(name);
+      showThemeSelector.set(false);
+    }}
+    class="bg-surface-secondary p-1 pr-3 rounded-full flex items-center gap-2 cursor-pointer shrink-0"
+  >
+    <enhanced:img src={imgSrc} alt="Abyss Theme" class="w-6 h-6" />
+    <span class="capitalize">{name}</span>
+  </button>
+{/snippet}

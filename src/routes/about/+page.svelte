@@ -38,7 +38,7 @@
           <a
             href="https://github.com/rebelot/kanagawa.nvim"
             target="_blank"
-            class="text-foreground-accent"
+            class="link-inline"
           >
             Kanagawa theme
           </a>

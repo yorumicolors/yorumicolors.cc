@@ -63,8 +63,8 @@
     </p>
     <span class="flex items-center gap-1 text-foreground-secondary">
       <span>Port Yorumi for your favorite application.</span>
-      <a href="/llms.txt" class="link-inline">
-        <Icon icon="ph:download-duotone" class="text-xl" />
+      <a href="/llms.txt" class="link-btn">
+        <Icon icon="ph:download-duotone" class="" />
         Download LLMs.txt
       </a>
     </span>

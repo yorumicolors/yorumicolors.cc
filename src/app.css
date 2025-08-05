@@ -15,6 +15,9 @@
 
   --color-ghost: var(--ghost);
   --color-borders: var(--borders);
+  --color-links: var(--links);
+  --color-buttons: var(--buttons);
+  --color-shadows: var(--shadows);
 
   --color-red: var(--red);
   --color-red-dull: var(--red-dull);
@@ -87,8 +90,8 @@ section {
   @apply px-6 py-2 flex gap-1 items-center transition-all whitespace-nowrap select-none h-fit;
 
   &.primary {
-    @apply border border-foreground bg-foreground text-surface-primary shadow-cyan-dull/30
-        hover:border-cyan hover:shadow-lg active:border-cyan-dull active:bg-foreground-secondary;
+    @apply border border-foreground-accent bg-buttons text-surface-primary shadow-shadows/30
+        hover:border-shadows hover:shadow-lg active:border-cyan-dull active:bg-foreground-secondary;
   }
 
   &.secondary {
@@ -107,7 +110,7 @@ span {
 }
 
 input {
-  @apply border border-borders outline-none px-6 pl-12 py-2 focus:border-foreground placeholder:text-foreground-muted;
+  @apply border border-borders outline-none px-6 pl-12 py-2 focus:border-foreground-accent placeholder:text-foreground-muted;
 }
 
 ::-webkit-scrollbar {
@@ -128,7 +131,13 @@ html {
 }
 
 a {
+  @apply inline-flex items-center gap-1 w-fit px-1 transition-all ring-links underline-offset-4;
+
+  &.link-btn {
+    @apply hover:text-links border;
+  }
+
   &.link-inline {
-    @apply flex items-center gap-2 border-b border-borders hover:border-cyan hover:text-cyan w-fit px-1 transition-all;
+    @apply hover:underline text-links;
   }
 }

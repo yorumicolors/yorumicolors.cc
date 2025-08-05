@@ -1,6 +1,6 @@
 @import "./yorumi.css";
 
-html[data-theme="dark"] {
+html[data-theme="abyss"] {
   --foreground: var(--yorumi-tsuki4);
   --foreground-secondary: var(--yorumi-tsuki2);
   --foreground-accent: var(--yorumi-raito-blue);
@@ -9,10 +9,13 @@ html[data-theme="dark"] {
   --surface-primary: var(--yorumi-yoru0);
   --surface-secondary: var(--yorumi-yoru1);
   --surface-tertiary: var(--yorumi-yoru2);
-  --surface-floating: var(--yorumi-yoruB);
+  --surface-floating: var(--yorumi-yoru);
 
   --ghost: var(--yorumi-tsuki0);
   --borders: var(--yorumi-yoru4);
+  --links: var(--yorumi-kairo-cyan);
+  --buttons: var(--yorumi-tsuki4);
+  --shadows: var(--yorumi-umi-cyan);
 
   --red: var(--yorumi-kairo-red);
   --red-dull: var(--yorumi-sango-red);
@@ -47,7 +50,7 @@ html[data-theme="dark"] {
   --orange-hl: var(--yorumi-kuroi-orange);
 }
 
-html[data-theme="light"] {
+html[data-theme="mist"] {
   --foreground: var(--yorumi-yoru0);
   --foreground-secondary: var(--yorumi-yoru3);
   --foreground-accent: var(--yorumi-kuroi-blue);
@@ -60,6 +63,9 @@ html[data-theme="light"] {
 
   --ghost: var(--yorumi-tsuki0);
   --borders: var(--yorumi-tsuki1);
+  --links: var(--yorumi-umi-blue);
+  --buttons: var(--yorumi-yoru);
+  --shadows: var(--yorumi-yoru);
 
   --red: var(--yorumi-umi-red);
   --red-dull: var(--yorumi-sango-red);
@@ -92,4 +98,104 @@ html[data-theme="light"] {
   --orange: var(--yorumi-umi-orange);
   --orange-dull: var(--yorumi-sango-orange);
   --orange-hl: var(--yorumi-raito-orange);
+}
+
+html[data-theme="shade"] {
+  --foreground: var(--yorumi-tsuki4);
+  --foreground-secondary: var(--yorumi-tsuki2);
+  --foreground-accent: var(--yorumi-tsukiB);
+  --foreground-muted: var(--yorumi-tsuki1);
+
+  --surface-primary: var(--yorumi-yoruB);
+  --surface-secondary: var(--yorumi-yoru);
+  --surface-tertiary: var(--yorumi-yoru0);
+  --surface-floating: var(--yorumi-yoruP);
+
+  --ghost: var(--yorumi-tsuki0);
+  --borders: var(--yorumi-yoru4);
+  --links: var(--yorumi-sango-blue);
+  --buttons: var(--yorumi-tsuki);
+  --shadows: var(--yorumi-tsukiB);
+
+  --red: var(--yorumi-kairo-red);
+  --red-dull: var(--yorumi-sango-red);
+  --red-hl: var(--yorumi-kuroi-red);
+
+  --green: var(--yorumi-kairo-green);
+  --green-dull: var(--yorumi-sango-green);
+  --green-hl: var(--yorumi-kuroi-green);
+
+  --blue: var(--yorumi-kairo-blue);
+  --blue-dull: var(--yorumi-sango-blue);
+  --blue-hl: var(--yorumi-kuroi-blue);
+
+  --yellow: var(--yorumi-kairo-yellow);
+  --yellow-dull: var(--yorumi-sango-yellow);
+  --yellow-hl: var(--yorumi-kuroi-yellow);
+
+  --magenta: var(--yorumi-kairo-magenta);
+  --magenta-dull: var(--yorumi-sango-magenta);
+  --magenta-hl: var(--yorumi-kuroi-magenta);
+
+  --cyan: var(--yorumi-kairo-cyan);
+  --cyan-dull: var(--yorumi-sango-cyan);
+  --cyan-hl: var(--yorumi-kuroi-cyan);
+
+  --purple: var(--yorumi-kairo-purple);
+  --purple-dull: var(--yorumi-sango-purple);
+  --purple-hl: var(--yorumi-kuroi-purple);
+
+  --orange: var(--yorumi-kairo-orange);
+  --orange-dull: var(--yorumi-sango-orange);
+  --orange-hl: var(--yorumi-kuroi-orange);
+}
+
+html[data-theme="kraken"] {
+  --foreground: var(--yorumi-tsuki4);
+  --foreground-secondary: var(--yorumi-tsuki2);
+  --foreground-accent: var(--yorumi-raito-purple);
+  --foreground-muted: var(--yorumi-tsuki1);
+
+  --surface-primary: var(--yorumi-yoruP);
+  --surface-secondary: var(--yorumi-yoru1);
+  --surface-tertiary: var(--yorumi-yoru2);
+  --surface-floating: var(--yorumi-kuroi-purple);
+
+  --ghost: var(--yorumi-tsuki0);
+  --borders: var(--yorumi-kuroi-purple);
+  --links: var(--yorumi-sango-purple);
+  --buttons: var(--yorumi-kairo-purple);
+  --shadows: var(--yorumi-umi-purple);
+
+  --red: var(--yorumi-kairo-red);
+  --red-dull: var(--yorumi-sango-red);
+  --red-hl: var(--yorumi-kuroi-red);
+
+  --green: var(--yorumi-kairo-green);
+  --green-dull: var(--yorumi-sango-green);
+  --green-hl: var(--yorumi-kuroi-green);
+
+  --blue: var(--yorumi-kairo-blue);
+  --blue-dull: var(--yorumi-sango-blue);
+  --blue-hl: var(--yorumi-kuroi-blue);
+
+  --yellow: var(--yorumi-kairo-yellow);
+  --yellow-dull: var(--yorumi-sango-yellow);
+  --yellow-hl: var(--yorumi-kuroi-yellow);
+
+  --magenta: var(--yorumi-kairo-magenta);
+  --magenta-dull: var(--yorumi-sango-magenta);
+  --magenta-hl: var(--yorumi-kuroi-magenta);
+
+  --cyan: var(--yorumi-kairo-cyan);
+  --cyan-dull: var(--yorumi-sango-cyan);
+  --cyan-hl: var(--yorumi-kuroi-cyan);
+
+  --purple: var(--yorumi-kairo-purple);
+  --purple-dull: var(--yorumi-sango-purple);
+  --purple-hl: var(--yorumi-kuroi-purple);
+
+  --orange: var(--yorumi-kairo-orange);
+  --orange-dull: var(--yorumi-sango-orange);
+  --orange-hl: var(--yorumi-kuroi-orange);
 }
