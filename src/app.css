@@ -126,3 +126,9 @@ html {
   scrollbar-width: thin;
   scrollbar-color: var(--color-ghost) transparent;
 }
+
+a {
+  &.link-inline {
+    @apply flex items-center gap-2 border-b border-borders hover:border-cyan hover:text-cyan w-fit px-1 transition-all;
+  }
+}

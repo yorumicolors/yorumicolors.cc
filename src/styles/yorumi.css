@@ -1,4 +1,5 @@
 :root {
+  --yorumi-tsuki: #c7c9d6;
   --yorumi-tsuki0: #4a4d59;
   --yorumi-tsuki1: #656771;
   --yorumi-tsuki2: #878996;
@@ -7,8 +8,8 @@
   --yorumi-tsukiP: #c0bce6;
   --yorumi-tsukiG: #d7e1b7;
   --yorumi-tsukiB: #b7b7dc;
-  --yorumi-tsukiA: #c7c9d6;
 
+  --yorumi-yoru: #02040e;
   --yorumi-yoru0: #060914;
   --yorumi-yoru1: #0c0f1a;
   --yorumi-yoru2: #121520;
@@ -17,7 +18,6 @@
   --yorumi-yoruP: #0e0d17;
   --yorumi-yoruG: #141712;
   --yorumi-yoruB: #0b0b19;
-  --yorumi-yoruA: #02040e;
 
   --yorumi-raito-red: #e8a8a6;
   --yorumi-raito-green: #cee1b7;

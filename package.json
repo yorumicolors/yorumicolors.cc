@@ -20,6 +20,7 @@
 		"prettier-plugin-tailwindcss": "^0.6.14",
 		"svelte": "^5.37.3",
 		"svelte-check": "^4.3.0",
+		"sveltekit-search-params": "^3.0.0",
 		"tailwindcss": "^4.1.11",
 		"typescript": "^5.9.2",
 		"typescript-eslint": "^8.38.0",

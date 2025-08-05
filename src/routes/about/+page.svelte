@@ -48,7 +48,10 @@
         </p>
       </div>
       <div class="flex gap-4">
-        <a href="https://github.com/yorumicolors/" class="btn primary">
+        <a
+          href="https://github.com/yorumicolors#contributing"
+          class="btn primary"
+        >
           <Icon icon="ph:handshake-duotone" class="text-xl" />
           <span>Contribute</span>
         </a>
