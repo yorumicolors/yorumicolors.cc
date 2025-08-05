@@ -9,8 +9,34 @@
   import { writable } from "svelte/store";
   import { type Picture } from "imagetools-core";
   import { slide } from "svelte/transition";
+  import { onDestroy, onMount } from "svelte";
 
   const showThemeSelector = writable<boolean>(false);
+  let themeSelector: HTMLDivElement | undefined;
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (themeSelector && !themeSelector.contains(event.target as Node)) {
+      showThemeSelector.set(false);
+    }
+  };
+
+  const handleScroll = () => {
+    showThemeSelector.set(false);
+  };
+
+  onMount(() => {
+    const unsubscribe = showThemeSelector.subscribe((value) => {
+      document.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+
+      if (value) {
+        document.addEventListener("click", handleClickOutside);
+        window.addEventListener("scroll", handleScroll);
+      }
+    });
+
+    onDestroy(unsubscribe);
+  });
 </script>
 
 <header
@@ -67,31 +93,33 @@
         <Icon icon="ph:x-logo-duotone" class="text-2xl transition-colors" />
       </a>
 
-      <button
-        on:click={() => showThemeSelector.set(!$showThemeSelector)}
-        class="cursor-pointer"
-      >
-        {#if $themeStore === "abyss"}
-          <enhanced:img src={abyss} alt="Abyss Theme" class="w-6 h-6" />
-        {:else if $themeStore === "shade"}
-          <enhanced:img src={shade} alt="Shade Theme" class="w-6 h-6" />
-        {:else if $themeStore === "kraken"}
-          <enhanced:img src={kraken} alt="Kraken Theme" class="w-6 h-6" />
-        {:else}
-          <enhanced:img src={mist} alt="Mist Theme" class="w-6 h-6" />
-        {/if}
-      </button>
-      {#if $showThemeSelector}
-        <div
-          class="flex flex-col gap-1 absolute top-full w-fit right-0 mt-1"
-          transition:slide
+      <div bind:this={themeSelector} class="relative flex items-center">
+        <button
+          on:click={() => showThemeSelector.set(!$showThemeSelector)}
+          class="cursor-pointer relative"
         >
-          {@render themeButton("abyss", abyss)}
-          {@render themeButton("shade", shade)}
-          {@render themeButton("kraken", kraken)}
-          {@render themeButton("mist", mist)}
-        </div>
-      {/if}
+          {#if $themeStore === "abyss"}
+            <enhanced:img src={abyss} alt="Abyss Theme" class="w-6 h-6" />
+          {:else if $themeStore === "shade"}
+            <enhanced:img src={shade} alt="Shade Theme" class="w-6 h-6" />
+          {:else if $themeStore === "kraken"}
+            <enhanced:img src={kraken} alt="Kraken Theme" class="w-6 h-6" />
+          {:else}
+            <enhanced:img src={mist} alt="Mist Theme" class="w-6 h-6" />
+          {/if}
+        </button>
+        {#if $showThemeSelector}
+          <div
+            class="flex flex-col gap-1 absolute top-full w-fit -right-1 mt-4"
+            transition:slide
+          >
+            {@render themeButton("abyss", abyss)}
+            {@render themeButton("shade", shade)}
+            {@render themeButton("kraken", kraken)}
+            {@render themeButton("mist", mist)}
+          </div>
+        {/if}
+      </div>
     </div>
   </nav>
 </header>
@@ -102,9 +130,15 @@
       themeStore.set(name);
       showThemeSelector.set(false);
     }}
-    class="bg-surface-secondary p-1 pr-3 rounded-full flex items-center gap-2 cursor-pointer shrink-0"
+    class="bg-surface-secondary p-1 pr-3 rounded-full flex items-center gap-2 cursor-pointer"
   >
-    <enhanced:img src={imgSrc} alt="Abyss Theme" class="w-6 h-6" />
+    <div class="w-6 h-6 shrink-0">
+      <enhanced:img
+        src={imgSrc}
+        alt="{name} Theme"
+        class="w-full h-full object-contain"
+      />
+    </div>
     <span class="capitalize">{name}</span>
   </button>
 {/snippet}

@@ -21,27 +21,27 @@
       components, ensuring a cohesive and visually appealing workspace.
     </p>
   </div>
-  <div class="grid grid-cols-2 grid-rows-2 gap-4 h-full w-full flex-grow group">
+  <div class="grid grid-cols-2 grid-rows-2 gap-0 h-full w-full flex-grow group">
     {@render colorschemeCard(
-      "Abyss",
+      "Abyss - The Darkest Theme",
       "https://mir-s3-cdn-cf.behance.net/project_modules/hd/ba4afc116462261.606908659fef2.jpg",
       "bottom-left",
       "top left",
     )}
     {@render colorschemeCard(
-      "Kraken",
+      "Kraken - The Sea Monsters",
       "https://avatars.mds.yandex.net/get-yapic/45566/enc-f3fd3ea93379494370a1ca43fac9af5987c761d217d50ad4157e454b5f2845d8/orig",
       "center",
       "top right",
     )}
     {@render colorschemeCard(
-      "Shade",
+      "Shade - The Neutral Palette",
       "https://i01.fotocdn.net/s217/caedf51892892026/public_pin_l/2971454317.jpg",
       "center",
       "bottom left",
     )}
     {@render colorschemeCard(
-      "Mist",
+      "Mist - The Lightest Theme",
       "https://m.media-amazon.com/images/M/MV5BM2NkYzRkYWMtOWFmNC00NTI3LTkzNmQtNzJmZGRhMDZlOGZmXkEyXkFqcGc@.jpg",
       "center",
       "bottom right",
@@ -78,7 +78,7 @@
   origin: string,
 )}
   <div
-    class="flex flex-col gap-1 hover:scale-125 hover:z-12 hover:opacity-100 transition-all group-hover:opacity-10"
+    class="flex flex-col gap-1 hover:scale-125 hover:z-12 hover:opacity-100 transition-all group-hover:opacity-10 p-2"
     style={`transform-origin: ${origin} !important;`}
   >
     <div
