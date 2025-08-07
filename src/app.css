@@ -12,6 +12,7 @@
   --color-surface-secondary: var(--surface-secondary);
   --color-surface-tertiary: var(--surface-tertiary);
   --color-surface-floating: var(--surface-floating);
+  --color-accent: var(--accent);
 
   --color-ghost: var(--ghost);
   --color-borders: var(--borders);
@@ -71,7 +72,7 @@ html {
 }
 
 body {
-  @apply bg-surface-primary text-foreground transition-colors duration-500 selection:bg-blue-hl selection:text-foreground scroll-smooth;
+  @apply bg-surface-primary text-foreground transition-colors duration-500 selection:bg-accent selection:text-foreground scroll-smooth;
 }
 
 section {

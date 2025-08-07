@@ -63,7 +63,7 @@
       Blog
     </a>
     <div
-      class="flex items-center gap-4 px-4 py-2 rounded-full border border-borders bg-surface-floating relative"
+      class="flex items-center gap-4 p-2 rounded-full border border-borders bg-surface-floating relative"
     >
       <a
         href="https://github.com/yorumicolors"
@@ -110,7 +110,7 @@
         </button>
         {#if $showThemeSelector}
           <div
-            class="flex flex-col gap-1 absolute top-full w-fit -right-1 mt-4"
+            class="flex flex-col gap-1 absolute top-full w-fit -right-2 mt-4 z-20"
             transition:slide
           >
             {@render themeButton("abyss", abyss)}

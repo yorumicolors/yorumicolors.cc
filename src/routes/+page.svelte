@@ -1,8 +1,20 @@
-<script>
+<script lang="ts">
   import Icon from "@iconify/svelte";
   import zed from "$lib/assets/zed_abyss.webp?enhanced";
   import ThemeIcons from "$lib/components/ThemeIcons.svelte";
   import seal from "$lib/assets/seal.gif";
+  import { onMount } from "svelte";
+
+  let getYorumiBtn: HTMLAnchorElement;
+
+  onMount(() => {
+    let searchInput = document.getElementById("search-input");
+    if (!searchInput) return;
+    getYorumiBtn?.addEventListener("click", () => {
+      searchInput.scrollIntoView({ behavior: "smooth", block: "start" });
+      searchInput.focus();
+    });
+  });
 </script>
 
 <svelte:head>
@@ -29,11 +41,7 @@
         </p>
       </div>
       <div class="flex gap-4">
-        <a
-          href="#search"
-          class="btn primary"
-          on:click={() => document.getElementById("search-input")?.focus()}
-        >
+        <a href="#search" class="btn primary" bind:this={getYorumiBtn}>
           <Icon icon="ph:caret-circle-double-down-duotone" class="text-xl" />
           <span>Get Yorumi</span>
         </a>
@@ -66,7 +74,7 @@
             class="flex items-center border border-borders rounded-full *:rounded-full *:p-2"
           >
             <div
-              class="bg-green-hl border border-green text-green flex items-center gap-2 !px-4"
+              class="bg-green-hl ring ring-green text-green flex items-center gap-2 !px-4"
             >
               <Icon icon="ph:asterisk-duotone" class="text-xl" />
               <span>All</span>

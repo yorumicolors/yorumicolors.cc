@@ -10,6 +10,7 @@ html[data-theme="abyss"] {
   --surface-secondary: var(--yorumi-yoru1);
   --surface-tertiary: var(--yorumi-yoru2);
   --surface-floating: var(--yorumi-yoru);
+  --accent: var(--yorumi-kuroi-blue);
 
   --ghost: var(--yorumi-tsuki0);
   --borders: var(--yorumi-yoru4);
@@ -60,6 +61,7 @@ html[data-theme="mist"] {
   --surface-secondary: var(--yorumi-tsuki3);
   --surface-tertiary: var(--yorumi-tsuki2);
   --surface-floating: var(--yorumi-tsukiA);
+  --accent: var(--yorumi-tsuki2);
 
   --ghost: var(--yorumi-tsuki0);
   --borders: var(--yorumi-tsuki1);
@@ -110,6 +112,7 @@ html[data-theme="shade"] {
   --surface-secondary: var(--yorumi-yoru);
   --surface-tertiary: var(--yorumi-yoru0);
   --surface-floating: var(--yorumi-yoruP);
+  --accent: var(--yorumi-yoru4);
 
   --ghost: var(--yorumi-tsuki0);
   --borders: var(--yorumi-yoru4);
@@ -160,6 +163,7 @@ html[data-theme="kraken"] {
   --surface-secondary: var(--yorumi-yoru1);
   --surface-tertiary: var(--yorumi-yoru2);
   --surface-floating: var(--yorumi-kuroi-purple);
+  --accent: var(--yorumi-kuroi-purple);
 
   --ghost: var(--yorumi-tsuki0);
   --borders: var(--yorumi-kuroi-purple);

@@ -3,6 +3,7 @@
   import shade from "$lib/assets/shade.webp?enhanced";
   import kraken from "$lib/assets/kraken.webp?enhanced";
   import mist from "$lib/assets/mist.webp?enhanced";
+  import { type Picture } from "imagetools-core";
   import { writable } from "svelte/store";
 
   let selected = writable<string>("");
@@ -20,7 +21,7 @@
   </span>
 </div>
 
-{#snippet themeBubble(theme: string, imgSrc)}
+{#snippet themeBubble(theme: string, imgSrc: Picture)}
   <div
     class="w-10 h-auto block -m-2 group-hover:opacity-5 hover:opacity-100 hover:z-12 hover:scale-110"
     role="contentinfo"
