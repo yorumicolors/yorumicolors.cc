@@ -16,14 +16,14 @@
     {@render themeBubble("kraken", kraken)}
     {@render themeBubble("mist", mist)}
   </div>
-  <span class="font-mono text-foreground-accent">
+  <span class="hidden lg:flex font-mono text-foreground-accent">
     {$selected ? `yorumi-${$selected}` : ""}
   </span>
 </div>
 
 {#snippet themeBubble(theme: string, imgSrc: Picture)}
   <div
-    class="w-10 h-auto block -m-2 group-hover:opacity-5 hover:opacity-100 hover:z-12 hover:scale-110"
+    class="w-8 md:w-10 h-auto block -m-2 group-hover:opacity-5 hover:opacity-100 hover:z-12 hover:scale-110"
     role="contentinfo"
     on:mouseover={() => selected.set(theme)}
     on:mouseleave={() => selected.set("")}

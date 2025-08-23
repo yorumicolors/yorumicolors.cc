@@ -22,53 +22,57 @@
 </svelte:head>
 
 <section class="flex-col items-center hero">
-  <div class="flex jusitfy-center items-center w-full pt-6">
+  <div class="flex jusitfy-center items-center w-full md:pt-6">
     <div class="flex justify-between items-end gap-6 w-full">
-      <div class="flex flex-col gap-2 w-full max-w-[800px]">
-        <div class="flex gap-4 items-center">
+      <div class="flex flex-col gap-4 md:gap-0 w-full">
+        <div class="flex flex-col md:flex-row gap-1 md:gap-4 md:items-center">
           <h1 class="text-display">Yorumi - Deep Code, Quiet Seas</h1>
           <span class="tag">
             <Icon icon="ph:check-circle-duotone" class="text-xl" />
             WCAG 2.0 - AAA</span
           >
         </div>
-        <p>
-          Yorumi is a calming night-sea colorscheme for developers. Yorumi
-          immerses your editor in soothing blues and greens, with low-contrast
-          mellow vibes for ultimate coziness. Text remains razor-sharp, easing
-          eye strain during late-night marathons. Less fatigue, more code
-          magic—dive in and keep your coding cool.
-        </p>
-      </div>
-      <div class="flex gap-4">
-        <a href="#search" class="btn primary" bind:this={getYorumiBtn}>
-          <Icon icon="ph:caret-circle-double-down-duotone" class="text-xl" />
-          <span>Get Yorumi</span>
-        </a>
-        <a
-          href="https://github.com/sponsors/esskayesss/"
-          target="_blank"
-          class="btn border border-borders bg-surface-tertiary
-          hover:bg-surface-secondary hover:shadow-lg shadow-yellow-dull/30 hover:border-yellow"
-        >
-          <Icon icon="ph:coins-duotone" class="text-xl" />
-          <span>Fuel the Voyage</span>
-        </a>
+        <div class="flex flex-col lg:flex-row lg:justify-between items-start lg:items-end gap-4">
+          <p class="max-w-[800px]">
+            Yorumi is a calming night-sea colorscheme for developers. Yorumi
+            immerses your editor in soothing blues and greens, with low-contrast
+            mellow vibes for ultimate coziness. Text remains razor-sharp, easing
+            eye strain during late-night marathons. Less fatigue, more code
+            magic—dive in and keep your coding cool.
+          </p>
+          <div class="flex gap-4">
+            <a href="#search" class="btn primary" bind:this={getYorumiBtn}>
+              <Icon icon="ph:caret-circle-double-down-duotone" class="text-xl" />
+              <span>Get Yorumi</span>
+            </a>
+            <a
+              href="https://github.com/sponsors/esskayesss/"
+              target="_blank"
+              class="btn border border-borders bg-surface-tertiary
+              hover:bg-surface-secondary hover:shadow-lg shadow-yellow-dull/30 hover:border-yellow"
+            >
+              <Icon icon="ph:coins-duotone" class="text-xl" />
+              <span>Fuel the Voyage</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <enhanced:img src={zed} alt="Zed, Yorumi Abyss" class="h-auto w-full" />
+  <enhanced:img src={zed} alt="Zed, Yorumi Abyss" class="h-[70vh] object-cover object-left md:object-fit md:h-auto md:w-full" />
 </section>
 
 <section class="flex-col">
   <div class="flex flex-col gap-2 w-full sticky-header">
-    <div class="flex justify-between items-center w-full">
-      <div class="flex items-center gap-4">
-        <img src={seal} alt="seal" class="w-10 h-10 rounded-md" />
-        <h1 class="text-display whitespace-nowrap">Get Yorumi</h1>
+    <div class="flex flex-col lg:flex-row gap-4 justify-between lg:items-center w-full">
+      <div class="flex items-center justify-between lg:justify-start gap-4">
+        <div class="flex items-center gap-4">
+          <img src={seal} alt="seal" class="w-10 h-10 rounded-md" />
+          <h1 class="text-display whitespace-nowrap">Get Yorumi</h1>
+        </div>
         <ThemeIcons />
       </div>
-      <div class="flex flex-grow max-w-fit gap-4">
+      <div class="flex flex-row-reverse lg:flex-row flex-grow max-w-fit gap-4">
         <div class="flex items-center">
           <div
             class="flex items-center border border-borders rounded-full *:rounded-full *:p-2"
@@ -103,5 +107,5 @@
     </div>
     <p></p>
   </div>
-  <div class="flex flex-wrap w-full gap-8" id="search"></div>
+  <div class="flex flex-wrap w-full gap-8 h-[200vh]" id="search"></div>
 </section>

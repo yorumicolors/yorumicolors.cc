@@ -11,9 +11,8 @@
   <div class="flex flex-col gap-2 w-full">
     <div class="flex items-center gap-4">
       <h1 class="text-display whitespace-nowrap">The Colorschemes</h1>
-      <ThemeIcons />
     </div>
-    <p class="max-w-5/6">
+    <p class="md:max-w-5/6">
       Yorumi features a deep sea palette, thoughtfully divided into six thematic
       color groups. Each group embodies a different element of the ocean to
       create a serene and focused coding environment. Utilize these colors to
@@ -21,7 +20,7 @@
       components, ensuring a cohesive and visually appealing workspace.
     </p>
   </div>
-  <div class="grid grid-cols-2 grid-rows-2 gap-0 h-full w-full flex-grow group">
+  <div class="flex flex-col md:grid md:grid-cols-2 grid-rows-4 md:grid-rows-2 gap-2 h-full w-full group">
     {@render colorschemeCard(
       "Abyss - The Darkest Theme",
       "https://mir-s3-cdn-cf.behance.net/project_modules/hd/ba4afc116462261.606908659fef2.jpg",
@@ -49,19 +48,19 @@
   </div>
 </section>
 
-<section class="hero flex-col">
+<section class="flex-col">
   <div class="flex flex-col gap-2 w-full">
     <div class="flex items-center gap-4 justify-between">
       <h1 class="text-display whitespace-nowrap">The Yorumi Palette</h1>
     </div>
-    <p class="max-w-5/6">
+    <p class="md:max-w-5/6">
       Yorumi features a deep sea palette, thoughtfully divided into six thematic
       color groups. Each group embodies a different element of the ocean to
       create a serene and focused coding environment. Utilize these colors to
       enhance various aspects of your editor, from syntax highlighting to UI
       components, ensuring a cohesive and visually appealing workspace.
     </p>
-    <span class="flex items-center gap-1 text-foreground-secondary">
+    <span class="flex flex-col md:flex-row md:items-center gap-1 text-foreground-secondary">
       <span>Port Yorumi for your favorite application.</span>
       <a href="/llms.txt" class="link-btn">
         <Icon icon="ph:download-duotone" class="" />
@@ -71,20 +70,35 @@
   </div>
 </section>
 
-{#snippet colorschemeCard(
-  name: string,
-  imgSrc: string,
-  position: string,
-  origin: string,
-)}
+{#snippet colorschemeCard(name: string, imgSrc: string, position: string, origin: string)}
   <div
-    class="flex flex-col gap-1 hover:scale-125 hover:z-12 hover:opacity-100 transition-all group-hover:opacity-10 p-2"
+    class="flex flex-col gap-1 hover:scale-110 hover:z-12 hover:opacity-100 transition-all group-hover:opacity-10
+      w-full max-w-full aspect-[7/3]"
     style={`transform-origin: ${origin} !important;`}
   >
     <div
-      class="col-span-1 row-span-1 border border-gray-300 w-full h-full"
+      class="border border-gray-300 w-full h-full"
       style={`background-image: url(${imgSrc}); background-size: cover; background-position: ${position};`}
     ></div>
     <span class="font-mono text-sm">{name}</span>
   </div>
 {/snippet}
+
+<!-- {#snippet colorschemeCard( -->
+<!--   name: string, -->
+<!--   imgSrc: string, -->
+<!--   position: string, -->
+<!--   origin: string, -->
+<!-- )} -->
+<!--   <div -->
+<!--     class="flex flex-col gap-1 hover:scale-125 hover:z-12 max-w-full -->
+<!--     hover:opacity-100 transition-all group-hover:opacity-10 p-2 aspect-[5/3]" -->
+<!--     style={`transform-origin: ${origin} !important;`} -->
+<!--   > -->
+<!--     <div -->
+<!--       class="col-span-1 row-span-1 border border-gray-300 w-full h-full" -->
+<!--       style={`background-image: url(${imgSrc}); background-size: cover; background-position: ${position};`} -->
+<!--     ></div> -->
+<!--     <span class="font-mono text-sm">{name}</span> -->
+<!--   </div> -->
+<!-- {/snippet} -->

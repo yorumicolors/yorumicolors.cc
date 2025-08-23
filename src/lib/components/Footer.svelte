@@ -7,8 +7,8 @@
 </script>
 
 <footer
-  class="flex w-full items-center justify-between py-6 text-center z-12
-    font-mono text-sm font-medium text-ghost fixed bottom-0 bg-surface-primary"
+  class="flex flex-col md:flex-row w-full items-center justify-between py-2 md:py-6 text-center z-12
+    font-mono text-xs md:text-sm font-medium text-ghost fixed bottom-0 bg-surface-primary"
 >
   <p class="flex items-center gap-1 mx-auto">
     <span>Copyright</span>

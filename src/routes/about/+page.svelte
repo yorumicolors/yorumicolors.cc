@@ -7,9 +7,9 @@
   <title>Yorumi | About</title>
 </svelte:head>
 
-<section class="flex w-full gap-10 h-full justify-between hero">
+<section class="flex-col-reverse lg:flex-row hero">
   <div
-    class="flex flex-col items-center justify-center group h-full w-full my-auto"
+    class="flex flex-col items-center justify-center group h-2/3 w-full my-auto"
   >
     <enhanced:img
       src={sealSots}
@@ -25,8 +25,8 @@
     </a>
   </div>
   <div class="flex jusitfy-center items-center w-full">
-    <div class="flex flex-col gap-8 w-full max-w-[600px]">
-      <div class="flex flex-col gap-4 w-full">
+    <div class="flex flex-col gap-4 md:gap-8 w-full max-w-[600px]">
+      <div class="flex flex-col gap-1 md:gap-4 w-full">
         <p>
           Yorumi is a calming deep sea colorscheme for developers. Inspired by
           the tranquil night sea, Yorumi bathes your editor in a soothing blend
