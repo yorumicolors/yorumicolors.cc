@@ -65,12 +65,12 @@
 <section class="flex-col">
   <div class="flex flex-col gap-2 w-full sticky-header">
     <div class="flex flex-col lg:flex-row gap-4 justify-between lg:items-center w-full">
-      <div class="flex items-center justify-between lg:justify-start gap-4">
+      <div class="flex items-center justify-between sm:justify-start lg:justify-start gap-4">
         <div class="flex items-center gap-4">
           <img src={seal} alt="seal" class="w-10 h-10 rounded-md" />
           <h1 class="text-display whitespace-nowrap">Get Yorumi</h1>
         </div>
-        <ThemeIcons />
+        <ThemeIcons className="hidden xs:flex" />
       </div>
       <div class="flex flex-row-reverse lg:flex-row flex-grow max-w-fit gap-4">
         <div class="flex items-center">

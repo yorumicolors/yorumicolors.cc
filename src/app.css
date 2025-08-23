@@ -64,6 +64,7 @@
   --text-display: 36px;
 
   --default-transition-duration: 400ms;
+  --breakpoint-xs: 400px;
 }
 
 html {
@@ -76,7 +77,8 @@ body {
 }
 
 section {
-  @apply px-4 md:px-10 mb-10 md:mb-16 min-h-screen flex w-full gap-5 md:gap-8 h-full;
+  @apply px-4 md:px-10 mb-10 md:mb-16 flex w-full gap-5 md:gap-8 h-full;
+  min-height: min(100vh, 700px);
 
   &.hero {
     @apply pt-22 md:pt-26 pb-16 md:pb-18 !mb-0;
@@ -106,7 +108,7 @@ p {
 
 span {
   &.tag {
-    @apply font-mono px-4 py-2 border text-sm flex items-center gap-2 w-fit;
+    @apply font-mono px-4 py-2 border text-sm flex items-center gap-2 w-fit whitespace-nowrap;
   }
 }
 

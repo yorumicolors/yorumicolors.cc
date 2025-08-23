@@ -7,9 +7,10 @@
   import { writable } from "svelte/store";
 
   let selected = writable<string>("");
+  let { className } = $props();
 </script>
 
-<div class="flex items-center gap-4">
+<div class={`flex items-center gap-4 ${className}`}>
   <div class="flex items-center justify-center px-4 *:transition-all group">
     {@render themeBubble("abyss", abyss)}
     {@render themeBubble("shade", shade)}
@@ -25,10 +26,10 @@
   <div
     class="w-8 md:w-10 h-auto block -m-2 group-hover:opacity-5 hover:opacity-100 hover:z-12 hover:scale-110"
     role="contentinfo"
-    on:mouseover={() => selected.set(theme)}
-    on:mouseleave={() => selected.set("")}
-    on:focus={() => selected.set(theme)}
-    on:blur={() => selected.set("")}
+    onmouseover={() => selected.set(theme)}
+    onmouseleave={() => selected.set("")}
+    onfocus={() => selected.set(theme)}
+    onblur={() => selected.set("")}
   >
     <enhanced:img src={imgSrc} alt={`yorumi-${theme}`} class="w-full h-auto" />
   </div>
